@@ -1,3 +1,6 @@
+import: https://github.com/liascript/CodeRunner
+
+
 # 3.Versuch
 3.Versuch Lehre
 
@@ -113,3 +116,20 @@ Der Hauptunterschied zwischen den beiden Notationen liegt in ihrer Detailtiefe u
 •	Die Hermann-Mauguin-Notation hingegen bietet eine vollständige Beschreibung der Raumgruppe, einschließlich sowohl der Punktgruppen- als auch der Translationsinformationen. Sie ist spezifischer und detaillierter, aber erfordert möglicherweise mehr Kenntnisse zur Interpretation.
 In der Praxis wird die Hermann-Mauguin-Notation häufiger verwendet, da sie die vollständigere und präzisere Methode zur Beschreibung von Raumgruppen ist.
 
+``` py
+print("Hallo Welt")
+```
+``` text  @output
+
+```
+<script>@input</script>
+
+
+``` js
+for (let i=0; i<5; i++)
+  console.log("Hallo Welt", i)
+```
+``` text  @output
+
+```
+<script>@input</script>
