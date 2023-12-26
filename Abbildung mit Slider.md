@@ -110,9 +110,11 @@ def main():
     y = 16/(4+x**2 )**2
 
     # plot
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(5,5))
+    
 
     ax.plot(x, y, linewidth=2.0)
+    #ax.axis('scaled')
     ax.set(xlim=(0, 8), xticks=np.arange(1,8,1),
         ylim=(0, 1), yticks=np.arange(0.1, 1,0.1))
         
