@@ -42,6 +42,7 @@ def f2(variable):
 def f3(variable):
     return (1/variable**12)-(1/variable**6)
 
+
 def main():
     x_min = 0.8
     x_max = 1.8
@@ -55,13 +56,17 @@ def main():
     line, = ax.plot(x, f1(x),'r--')
     line, = ax.plot(x, f2(x),'b--')
     line, = ax.plot(x, f3(x),'g')
+
     plt.grid(True)
     ax.set_xlabel(x_label)
     ax.set_ylabel(y_label)
     ax.set_ylim(y_min, y_max)
-    plt.legend((r"$\\left (\\dfrac{\\sigma}{R}\\right)^{12}$", '2', '3' ),
+    plt.legend((r"$+\\left (\\dfrac{\\sigma}{R}\\right)^{12}$", r"$-\\left (\\dfrac{\\sigma}{R}\\right)^{6}$", r"$+\\left (\\dfrac{\\sigma}{R}\\right)^{12}-\\left (\\dfrac{\\sigma}{R}\\right)^{6}$" ),
            loc='upper center', shadow=True)
+ # Vertikale gestrichelte Linie an der Stelle 'pos' einzeichnen
+ 
+
     plt.show()
-main()
+    main()
 ```
 @Pyodide.eval(`["main.py"]`, `python3 -m compileall .`, `python3 main.py`)
