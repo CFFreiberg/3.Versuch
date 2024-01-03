@@ -9,7 +9,7 @@ language: de
 
 narrator: Deutsch Female
 
-comment:  Struktur der Materie Übung 7
+comment:  Abbildung
 
 @style
 .lia-toc__bottom {
