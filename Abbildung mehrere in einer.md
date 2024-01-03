@@ -30,8 +30,9 @@ import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 ``` python
 # Quelle: https://matplotlib.org/stable/gallery/widgets/slider_snap_demo.html
 
-import matplotlib.pyplot as plt
+import sys
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 # The parametrized function to be plotted
@@ -56,17 +57,13 @@ def main():
     line, = ax.plot(x, f1(x),'r--')
     line, = ax.plot(x, f2(x),'b--')
     line, = ax.plot(x, f3(x),'g')
-
+    plt.legend((r"$+\\left (\\dfrac{\\sigma}{R}\\right)^{12}$", r"$-\\left (\\dfrac{\\sigma}{R}\\right)^{6}$", r"$+\\left (\\dfrac{\\sigma}{R}\\right)^{12}-\\left (\\dfrac{\\sigma}{R}\\right)^{6}$" ),loc='upper center', shadow=True)
     plt.grid(True)
     ax.set_xlabel(x_label)
     ax.set_ylabel(y_label)
     ax.set_ylim(y_min, y_max)
-    plt.legend((r"$+\\left (\\dfrac{\\sigma}{R}\\right)^{12}$", r"$-\\left (\\dfrac{\\sigma}{R}\\right)^{6}$", r"$+\\left (\\dfrac{\\sigma}{R}\\right)^{12}-\\left (\\dfrac{\\sigma}{R}\\right)^{6}$" ),
-           loc='upper center', shadow=True)
- # Vertikale gestrichelte Linie an der Stelle 'pos' einzeichnen
- 
-
+    
     plt.show()
-    main()
+main()
 ```
 @Pyodide.eval(`["main.py"]`, `python3 -m compileall .`, `python3 main.py`)
