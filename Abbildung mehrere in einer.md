@@ -48,16 +48,19 @@ def main():
     x_num = 100
     y_min = -1
     y_max = 1
-    x_label = "Beschriftung"
-    y_label = "text"
+    x_label = r"$\\frac{R }{\\sigma}$"
+    y_label = r"$\\frac{U }{\\varepsilon}$"
     x = np.linspace(x_min, x_max, x_num)
     fig, ax = plt.subplots()
     line, = ax.plot(x, f1(x),'r--')
     line, = ax.plot(x, f2(x),'b--')
     line, = ax.plot(x, f3(x),'g')
+    plt.grid(True)
     ax.set_xlabel(x_label)
     ax.set_ylabel(y_label)
     ax.set_ylim(y_min, y_max)
+    plt.legend(('1', '2', '3'),
+           loc='upper center', shadow=True)
     plt.show()
 main()
 ```
